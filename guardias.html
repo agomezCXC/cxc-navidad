@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guardias Fin de Año - CXC Agency</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@700&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --cxc-magenta: #840058;
+            --cxc-dark: #3d0029;
+            --cxc-light: #fcf7fa;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cxc-light);
+            background-image: url('https://www.transparenttextures.com/patterns/snow.png');
+            min-height: 100vh;
+        }
+
+        .font-christmas { font-family: 'Mountains of Christmas', cursive; }
+
+        .cxc-gradient-header {
+            background: linear-gradient(135deg, var(--cxc-dark) 0%, var(--cxc-magenta) 100%);
+        }
+
+        .card-christmas {
+            background: white;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .card-christmas:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(132, 0, 88, 0.15);
+        }
+
+        .snow-particle {
+            position: fixed;
+            top: -10px;
+            color: white;
+            user-select: none;
+            z-index: 40;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body class="pb-10">
+
+    <!-- 🎵 AUDIO -->
+    <audio id="bg-music" loop>
+        <source src="https://drive.google.com/uc?export=download&id=1IbSPxT_yWN-JNTDNJnJZKP1AZyLQcfsV" type="audio/mpeg">
+    </audio>
+
+    <!-- 🔊 BOTÓN DE MÚSICA -->
+    <button id="musicBtn"
+        class="fixed bottom-4 right-4 bg-[#840058] text-white px-4 py-2 rounded-full shadow-lg z-50">
+        🔊 Música
+    </button>
+
+    <!-- HEADER -->
+    <header class="cxc-gradient-header text-white py-12 px-4 shadow-lg text-center relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10">
+            <span class="text-9xl absolute -left-10 -top-10">❄️</span>
+            <span class="text-9xl absolute -right-10 -bottom-10">🎄</span>
+        </div>
+
+        <div class="w-full flex justify-center md:justify-end mb-6 md:mb-8">
+            <img src="https://www.cxc.agency/wp-content/uploads/2022/10/CXC-Logo-08-1024x511.png"
+                 alt="Logo Corporativo CXC"
+                 class="h-8 w-auto"
+                 onerror="this.onerror=null; this.src='https://placehold.co/100x40/f3e6ef/3d0029?text=CXC+Logo';">
+        </div>
+
+        <h1 class="text-5xl md:text-7xl font-christmas mb-2">
+            Guardias de Navidad y Fin de Año
+        </h1>
+        <p class="text-xl font-light tracking-widest uppercase">
+            TECNOLOGÍA EN CUENTAS POR COBRAR
+        </p>
+    </header>
+
+    <!-- CONTENIDO -->
+    <main class="max-w-6xl mx-auto mt-10 px-4">
+        <div class="grid md:grid-cols-2 gap-8">
+
+            <!-- 24 DICIEMBRE -->
+            <div class="card-christmas rounded-3xl overflow-hidden shadow-sm">
+                <div class="bg-red-600 text-white p-6 text-center">
+                    <h2 class="text-3xl font-christmas">Martes 24 de Diciembre</h2>
+                    <p class="text-xs font-bold opacity-80 uppercase">Nochebuena</p>
+                </div>
+                <div class="p-8 space-y-6">
+                    <div class="flex items-center p-4 rounded-xl bg-gray-50 border-l-4 border-[#840058]">
+                        🎁 <span class="ml-4 font-bold">Daniel Godínez Obregón</span>
+                    </div>
+                    <div class="flex items-center p-4 rounded-xl bg-gray-50 border-l-4 border-[#840058]">
+                        🎄 <span class="ml-4 font-bold">Oscar Leonardo Corvera Espinosa</span>
+                    </div>
+                    <div class="flex items-center p-4 rounded-xl bg-gray-50 border-l-4 border-[#840058]">
+                        ✨ <span class="ml-4 font-bold">Juan Carlos Soto García</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 31 DICIEMBRE -->
+            <div class="card-christmas rounded-3xl overflow-hidden shadow-sm">
+                <div class="bg-[#2980b9] text-white p-6 text-center">
+                    <h2 class="text-3xl font-christmas">Martes 31 de Diciembre</h2>
+                    <p class="text-xs font-bold opacity-80 uppercase">Año Nuevo</p>
+                </div>
+                <div class="p-8 space-y-6">
+                    <div class="flex items-center p-4 rounded-xl bg-gray-50 border-l-4 border-[#840058]">
+                        🎆 <span class="ml-4 font-bold">Gustavo Hernández Hurtado</span>
+                    </div>
+                    <div class="flex items-center p-4 rounded-xl bg-gray-50 border-l-4 border-[#840058]">
+                        🥂 <span class="ml-4 font-bold">Gustavo Adrian Camacho</span>
+                    </div>
+                    <div class="flex items-center p-4 rounded-xl bg-gray-50 border-l-4 border-[#840058]">
+                        🚀 <span class="ml-4 font-bold">Christian Aguilar</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="mt-16 text-center">
+        <p class="text-[#3d0029] font-bold">¡Felices Fiestas equipo CXC!</p>
+        <p class="text-sm text-gray-500">Innovación Continua 2025</p>
+    </footer>
+
+    <!-- ❄️ NIEVE -->
+    <script>
+        function createSnow() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snow-particle');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.fontSize = Math.random() * 20 + 10 + 'px';
+            snowflake.style.opacity = Math.random();
+
+            document.body.appendChild(snowflake);
+
+            const animation = snowflake.animate(
+                [{ transform: 'translateY(0)' }, { transform: 'translateY(100vh)' }],
+                { duration: 7000, easing: 'linear' }
+            );
+
+            animation.onfinish = () => snowflake.remove();
+        }
+        setInterval(createSnow, 300);
+    </script>
+
+    <!-- 🎶 CONTROL DE AUDIO -->
+    <script>
+        const music = document.getElementById('bg-music');
+        const btn = document.getElementById('musicBtn');
+        let playing = false;
+
+        btn.addEventListener('click', () => {
+            if (!playing) {
+                music.volume = 0.25;
+                music.play();
+                btn.textContent = '🔇 Silenciar';
+            } else {
+                music.pause();
+                btn.textContent = '🔊 Música';
+            }
+            playing = !playing;
+        });
+    </script>
+
+</body>
+</html>
